@@ -1,6 +1,6 @@
 # Projeto Mini-ERP
 
-	Projeto com o objetivo de simular a criação de um mini-ERP, sistema com diversos módulos que representam a estrutura de uma empresa. Em sua forma mais simples possível.
+			Projeto com o objetivo de simular a criação de um mini-ERP, sistema com diversos módulos que representam a estrutura de uma empresa. Em sua forma mais simples possível.
 
 ## Módulo - Finanças
 
