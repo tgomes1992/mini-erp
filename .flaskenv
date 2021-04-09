@@ -1,0 +1,3 @@
+FLASK_APP=ERP
+FLASK_ENV=development
+
