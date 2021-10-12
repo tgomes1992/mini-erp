@@ -1,0 +1,27 @@
+
+
+{% extends "template_base.html" %}
+
+
+{% block content %}
+
+   {% for item in fornecedores %}
+   <div>
+
+    <li data-id={{item.id}}>{{item.nome}}
+        <a href="editarFornecedor/{{item.id}}">Editar</a>
+        <button>Excluir</button>
+    </li>
+
+
+   </div>
+
+    
+   
+   
+   {% endfor %}
+
+
+
+{% endblock %}
+

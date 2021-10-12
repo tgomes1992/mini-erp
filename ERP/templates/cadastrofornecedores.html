@@ -1,0 +1,20 @@
+
+
+{% extends "template_base.html" %}
+
+
+{% block content %}
+
+    <form method='post' action='cadastrar_fornecedor'>
+        {{ form.hidden_tag()}}
+        {{form.nome.label}}
+        {{form.nome}}
+        {{form.endereco.label}}
+        {{form.endereco}}
+        {{form.cnpj.label}}
+        {{form.cnpj}}
+        {{form.submit()}}
+    </form>
+
+{% endblock %}
+

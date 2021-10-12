@@ -1,0 +1,21 @@
+
+
+{% extends "template_base.html" %}
+
+
+{% block content %}
+
+<form method='post' action='{{url_for('concluir_edicao',id=data.fornecedor.id)}}'>
+    {{data.form.nome.label}}
+    {{data.form.nome(value=data.fornecedor.nome)}}
+    {{data.form.endereco.label}}
+    {{data.form.endereco(value=data.fornecedor.endereco)}}
+    {{data.form.cnpj.label}}
+    {{data.form.cnpj(value=data.fornecedor.cnpj)}}
+    {{data.form.submit()}}
+</form>
+
+
+
+{% endblock %}
+

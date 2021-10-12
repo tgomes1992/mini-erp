@@ -1,0 +1,22 @@
+
+
+{% extends "template_base.html" %}
+
+
+{% block content %}
+
+    <form method='post' action={{url_for('lancar_notas_concluir')}}>
+        {{ form.hidden_tag()}}
+        {{form.status.label}}
+        {{form.status}}
+        {{form.fornecedor.label}}
+        {{form.fornecedor}}
+        {{form.numero.label}}
+        {{form.numero}}
+        {{form.valor.label}}
+        {{form.valor}}
+        {{form.submit()}}
+    </form>
+
+{% endblock %}
+

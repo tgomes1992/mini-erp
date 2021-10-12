@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <nav>
+           <li><a href={{url_for("criar_fornecedor") }}>Cadastro Fornecedores</a></li>
+           <li><a href={{url_for("check_vendors") }}>CGerenciamento Fornecedores</a></li>  
+           <li><a href={{url_for("lancar_notas") }}>Lançar Notas </a></li>
+           <li><a href={{url_for("notas_lancadas") }}>Notas Lançadas</a></li>
+        </nav>
+
+
+        {% block content %}
+
+
+
+        {% endblock %}
+
+
+
+
+    </body>
+</html>
