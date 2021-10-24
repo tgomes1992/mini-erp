@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>Home</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="/static/style.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+        <script type="text/javascript" src="/static/js/jquery.js"></script>
+        <script type="text/javascript" src="/static/js/materialize.js"></script>
+        <script type="text/javascript" src="/static/app.js"></script>
     </head>
 
     <body>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href={{url_for("criar_fornecedor") }}>Cadastro Fornecedores</a></li>
+        <li><a href={{url_for("check_vendors") }}>Gerenciamento Fornecedores</a></li>  
+        <li><a href={{url_for("lancar_notas") }}>Lançar Notas </a></li>
+        <li><a href={{url_for("notas_lancadas") }}>Notas Lançadas</a></li>
+      </ul>
+
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href=#>Criar Pedido de Compra</a></li>
+        <li><a href=#>Pedidos de Compra por Fornecedor</a></li>
+        <li><a href=#>Cadastro de Materiais</a></li>
+        <li><a href=#>Cadastro de Serviços</a></li>
+        <li><a href=#>Relatórios</a></li>
+      </ul>
+
+      <ul id="dropdown3" class="dropdown-content">
+        <li><a href=#>Consultar Plano de Contas</a></li>
+        <li><a href=#>Cadastrar Contas</a></li>
+        <li><a href=#>Lançamentos Contábeis</a></li>
+        <li><a href=#>Balancete por Período</a></li>
+        <li><a href=#>Outras Descrições Contábeis</a></li>
+      </ul>
 
         <nav>
-           <li><a href={{url_for("criar_fornecedor") }}>Cadastro Fornecedores</a></li>
-           <li><a href={{url_for("check_vendors") }}>CGerenciamento Fornecedores</a></li>  
-           <li><a href={{url_for("lancar_notas") }}>Lançar Notas </a></li>
-           <li><a href={{url_for("notas_lancadas") }}>Notas Lançadas</a></li>
-        </nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">MINI-ERP</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Financeiro<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Compras<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Contábil<i class="material-icons right">arrow_drop_down</i></a></li>
+              </ul>
+              </ul>
+            </div>
+          </nav>
 
 
+
+        <div class="container">
         {% block content %}
 
 
 
         {% endblock %}
 
+        </div>
 
 
 
     </body>
+
+    
+    
 </html>

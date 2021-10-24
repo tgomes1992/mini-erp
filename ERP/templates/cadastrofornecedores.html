@@ -5,16 +5,30 @@
 
 {% block content %}
 
-    <form method='post' action='cadastrar_fornecedor'>
+       
+
+    <form method='post' class="col s12" action='cadastrar_fornecedor'>
+        <h2 class="heading h2" >Cadastro de Fornecedores</h2>
         {{ form.hidden_tag()}}
+        <div class="input-field col s6">
         {{form.nome.label}}
         {{form.nome}}
-        {{form.endereco.label}}
-        {{form.endereco}}
-        {{form.cnpj.label}}
-        {{form.cnpj}}
-        {{form.submit()}}
+        </div>
+        <div class="input-field col s6">
+            {{form.endereco.label}}
+            {{form.endereco}}
+        </div>
+        <div class="input-field col s6">
+            {{form.cnpj.label}}
+            {{form.cnpj}}
+        </div>
+        <div class="input-field col s4">
+            {{form.submit(class="btn")}}
+        </div>
+     
     </form>
+
+
 
 {% endblock %}
 

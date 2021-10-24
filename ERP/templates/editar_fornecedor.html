@@ -5,15 +5,28 @@
 
 {% block content %}
 
-<form method='post' action='{{url_for('concluir_edicao',id=data.fornecedor.id)}}'>
-    {{data.form.nome.label}}
-    {{data.form.nome(value=data.fornecedor.nome)}}
-    {{data.form.endereco.label}}
-    {{data.form.endereco(value=data.fornecedor.endereco)}}
-    {{data.form.cnpj.label}}
-    {{data.form.cnpj(value=data.fornecedor.cnpj)}}
-    {{data.form.submit()}}
-</form>
+<div class="row">
+    <form method='post' class="col s12" action='{{url_for('concluir_edicao',id=data.fornecedor.id)}}'>
+        <h2 class="heading h2" >Editar Fornecedor</h2>
+        {{ data.form.hidden_tag()}}
+        <div class="input-field col s4">
+            {{data.form.nome.label}}
+            {{data.form.nome(value=data.fornecedor.nome)}}
+        </div>
+        <div class="input-field col s4">
+            {{data.form.endereco.label}}
+            {{data.form.endereco(value=data.fornecedor.endereco)}}
+        </div>
+        <div class="input-field col s4">
+            {{data.form.cnpj.label}}
+            {{data.form.cnpj(value=data.fornecedor.cnpj)}}
+        </div>
+        <div class="input-field col s4">            
+            {{data.form.submit(value="Atualizar Cadastro",class="btn")}}
+        </div>
+     
+    </form> 
+</div>
 
 
 

@@ -5,18 +5,41 @@
 
 {% block content %}
 
-    <form method='post' action={{url_for('lancar_notas_concluir')}}>
-        {{ form.hidden_tag()}}
-        {{form.status.label}}
-        {{form.status}}
-        {{form.fornecedor.label}}
-        {{form.fornecedor}}
-        {{form.numero.label}}
-        {{form.numero}}
-        {{form.valor.label}}
-        {{form.valor}}
-        {{form.submit()}}
+<div class="row">
+
+    <form method='post'  class="col s12" action={{url_for('lancar_notas_concluir')}}>
+        <h2 class="heading h2" >Lançar Notas</h2>
+    
+        {{form.hidden_tag()}}
+        <div class="input-field col s6">          
+            {{form.status}}
+            {{form.status.label}}
+         
+        </div>
+
+
+        <div class="input-field col s6">
+           
+            {{form.fornecedor}}
+            {{form.fornecedor.label}}
+        </div>
+
+        <div class="input-field col s6">                
+            {{form.numero.label}}
+            {{form.numero}}
+        </div>
+
+        <div class="input-field col s6">        
+            {{form.valor.label}}
+            {{form.valor}}
+        </div>
+
+        <div class="input-field col s6">
+            {{form.submit()}}
+        </div> 
     </form>
+
+</div>
 
 {% endblock %}
 
